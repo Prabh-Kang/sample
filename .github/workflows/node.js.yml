@@ -40,4 +40,5 @@ jobs:
           parse-json: true
 
       - name: Start Server
-        run: npm run start
+      - run: npm install
+      - run: npm run start
