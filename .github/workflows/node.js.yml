@@ -38,8 +38,10 @@ jobs:
         with:
           secrets: SAMPLE_PROJECT*
           parse-json: true
-
+      - run: npm i pm2
+      - run: lsof -i :4001
       - name: Install Dependencies
         run: npm install
       - name: Start Server
-        run: npm run start
+        run: pm2 start server.js
+      - run: lsof -i :4001
