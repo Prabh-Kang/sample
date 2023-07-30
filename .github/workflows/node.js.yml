@@ -38,5 +38,10 @@ jobs:
         with:
           secrets: SAMPLE_PROJECT*
           parse-json: true
-      - run: echo ${{env.SAMPLE_PROJECT}} > log.txt
-      - run: cat log.txt
+
+      - run: npm i pm2
+      - name: Install Dependencies
+        run: npm install
+      - name: Start Server
+        run: pm2 start server.js
+      - run: pm2 logs
