@@ -36,7 +36,7 @@ jobs:
       - name: Read secrets from AWS Secrets Manager into environment variables
         uses: abhilash1in/aws-secrets-manager-action@v2.1.0
         with:
-          secrets: SAMPLE_PROJECT
+          secrets: SAMPLE_PROJECT*
           parse-json: true
 
         #Optional Steps
