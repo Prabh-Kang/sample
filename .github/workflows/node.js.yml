@@ -39,7 +39,5 @@ jobs:
           secrets: SAMPLE_PROJECT*
           parse-json: true
 
-        #Optional Steps
-
-      - name: Check if env variable is set after fetching secrets
-        run: echo ${{env.SAMPLE_PROJECT}}
+      - name: Start Server
+        run: npm run start
