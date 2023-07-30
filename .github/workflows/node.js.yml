@@ -39,6 +39,7 @@ jobs:
           secrets: SAMPLE_PROJECT*
           parse-json: true
 
+      - name: Install Dependencies
+        run: npm install
       - name: Start Server
-      - run: npm install
-      - run: npm run start
+        run: npm run start
